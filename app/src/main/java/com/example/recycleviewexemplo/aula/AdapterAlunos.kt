@@ -12,7 +12,7 @@ class AdapterAlunos(
 ):RecyclerView.Adapter<AlunoViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlunoViewHolder {
         return AlunoViewHolder(
-            LayoutInflater.from(context)
+            LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_layout,parent,false)
 
         )

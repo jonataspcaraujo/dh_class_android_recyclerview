@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewPager: ViewPager2
     lateinit var fragmentAdapter: FragmentAdapter
 
+    var f1: Fragment01 = Fragment01(FragmentAdapter(this).initList())
+
     lateinit var tabs: TabLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,10 +50,27 @@ class MainActivity : AppCompatActivity() {
 
         override fun createFragment(position: Int): Fragment {
             return when(position){
-                0 -> Fragment01()
-                1 -> Fragment02()
-                else -> Fragment03()
+                0 -> f1
+                1 -> Fragment01(initList())
+                else -> Fragment03(initList())
             }
+        }
+
+        fun initList():MutableList<CardapioItem>{
+
+            val itemList = mutableListOf<CardapioItem>()
+
+            for (index in 0..10) {
+                val item: CardapioItem
+                item = CardapioItem("Item $index",
+                    index.toFloat(),
+                    "https://image.gplustogo.com.br/produto/347/t8446.jpg?v=1",
+                    "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI")
+                itemList.add(item)
+            }
+
+            return itemList
+
         }
 
     }

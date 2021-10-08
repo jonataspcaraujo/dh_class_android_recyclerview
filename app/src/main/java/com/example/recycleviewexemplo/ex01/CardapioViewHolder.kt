@@ -13,4 +13,5 @@ class CardapioViewHolder(view: View):RecyclerView.ViewHolder(view) {
     var descricao: TextView = view.findViewById(R.id.item_description)
     var imagem: ImageView = view.findViewById(R.id.item_imagem)
 
+
 }

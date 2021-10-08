@@ -11,7 +11,7 @@ class CardapioAdapter(val context: Context, var lDados: MutableList<CardapioItem
     :RecyclerView.Adapter<CardapioViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardapioViewHolder {
-        val view = LayoutInflater.from(context)
+        val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_cardapio,parent,false)
         return CardapioViewHolder(view)
     }

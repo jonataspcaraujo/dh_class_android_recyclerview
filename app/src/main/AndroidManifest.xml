@@ -12,14 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecycleViewExemplo">
         <activity
+            android:name=".aula.AlunoEscolhidoActivity"
+            android:exported="true" />
+        <activity
             android:name=".ex01.MainActivity"
             android:exported="true">
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
 
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
 
         </activity>
         <activity
@@ -36,11 +40,13 @@
         <activity
             android:name=".aula.ActRecycler"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
         <activity
             android:name=".exemplo.MainActivity"
